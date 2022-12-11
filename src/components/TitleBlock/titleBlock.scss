@@ -1,0 +1,14 @@
+@import '../../styles/customStyles.scss';
+
+.titleBlock {
+  text-align: center;
+  &_title {
+    @include textForTitle;
+    margin-bottom: 16px;
+  }
+
+  &_text {
+    @include textForMainParagraph;
+    margin-bottom: 32px;
+  }
+}

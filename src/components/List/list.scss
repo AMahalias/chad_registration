@@ -1,0 +1,33 @@
+@import '../../styles/customStyles.scss';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.list_item-title::before {
+  content: "";
+  margin-right: 15px;
+  width: 12px;
+  height: 10px;
+  background-image: url(../../images/Vector.svg);
+}
+
+.list_item-title {
+  display: flex;
+  align-items: center;
+  @include textForTitleParagraph;
+}
+
+.list_item-text {
+  max-width: 310px;
+  margin-left: 27px;
+  display: flex;
+  align-items: center;
+  @include textForParagraphs;
+}

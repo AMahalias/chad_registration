@@ -1,0 +1,18 @@
+@import '../../styles/customStyles.scss';
+
+.logo {
+  &_img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+    background-image: url(../../images/logo.svg);
+    background-repeat: no-repeat;
+  }
+
+  &_title {
+    display: inline-block;
+    @include titleLogo;
+    margin-bottom: 24px;
+  }
+}

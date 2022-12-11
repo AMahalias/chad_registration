@@ -1,0 +1,57 @@
+@import '../../styles/customStyles.scss';
+
+.select {
+  z-index: 90;
+
+  &_label {
+    @include textForLabel;
+  }
+
+  &_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    background: #F8F9FC;
+    border-radius: 4px;
+    @include textForPlaceholder;
+    z-index: 20;
+
+    &.is-open {
+      border: 1px solid $colorActiveNav;
+    }
+
+    &.is-chosen::after {
+      content: "";
+      width: 12px;
+      height: 10px;
+      background-image: url(../../images/Vector.svg);
+    }
+  }
+
+  &_options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: #FAFCFF;
+    border-radius: 8px 8px 0px 0px;
+    list-style: none;
+    z-index: 20;
+  }
+
+  &_item {
+    @include textForPlaceholder;
+    color: #17191C;
+  }
+
+  &_input {
+    padding: 10px;
+    background: #FAFCFF;
+    border-radius: 8px 8px 0px 0px;
+    list-style: none;
+    @include textForPlaceholder;
+    color: #17191C;
+    z-index: 20;
+  }
+}

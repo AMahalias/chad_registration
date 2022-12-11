@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Eudoxus Sans';
+  font-weight: 700;
+  src: url(../fonts/EudoxusSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 600;
+  src: url(../fonts/Inter-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 500;
+  src: url(../fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 400;
+  src: url(../fonts/Inter-Regular.ttf);
+}
+
+@import '../../node_modules/bootstrap/dist/scss/bootstrap.scss';
+@import './utils/mixins';
+@import './utils/variables';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App--with-sidebar {
+  overflow: hidden;
+
+  @include onTablet {
+    overflow: visible;
+  }
+}
+
+.help.is-danger {
+  color: $colorForError;
+}
+
+.is-danger.input {
+  border-color: $colorForError;
+}
+
+.input:active,
+.input:focus,
+.is-danger.input:active,
+.is-danger.input:focus {
+  box-shadow: none;
+}
+
+.input:hover {
+  border: 1px solid $colorForPlaceholder;
+}
+
+input.input:focus,
+input:active {
+  border: 1px solid $colorActiveNav;
+  border-color: $colorActiveNav;
+}
+
+select.select:active, 
+select.select:focus {
+  border-color: $colorActiveNav;
+  box-shadow: none;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+  border-color: $colorForLabels;
+  right: 15px;
+}
+
+@media (min-width: 576px){
+  .container {
+    max-width: 100%;
+  }
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
+}
+
+.error {
+  &_logo {
+    background-image: url(../images/logo.svg);
+    width: 88px;
+    height: 88px;
+  }
+
+  &_text {
+    @include textForMainParagraph;
+    color: #5F82A0;
+  }
+
+  &_container {
+    max-width: 480px;
+    max-height: 532px;
+  }
+}
+
+.shop_logo {
+  align-self: center;
+  background-image: url(../images/Raccoon_image.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+
+  &_ready {
+    background-image: url(../images/Smiling_racoon.png);
+  }
+}
+
+.login {
+  &_text {
+    display: flex;
+    justify-content: center;
+    @include textForParagraphs;
+    color: #464A53;
+    gap: 4px;
+    text-decoration: none;
+
+    &-link {
+      color: $colorActiveNav;
+      text-decoration: none;
+    }
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 10px 10px 17px;
+  height: 45px;
+  background: #F8F9FC;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 24px;
+  outline: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid $colorActiveNav;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-control:active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 10px 10px 17px;
+  gap: 10px;
+  width: 400px;
+  height: 45px;
+  background: #FFFFFF;
+  border: 1px solid #32ABF2;
+  border-radius: 4px;
+  color: #030E16;
+  outline: none;
+  box-shadow: none;
+}

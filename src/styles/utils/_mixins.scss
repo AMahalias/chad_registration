@@ -1,0 +1,135 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.5s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin titleLogo {
+  font-family: 'Eudoxus Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  color: $colorForTitle;
+}
+
+@mixin textForTitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: $colorForTitle;
+}
+
+@mixin textForMainParagraph {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: $colotForText;
+}
+
+@mixin textForTitleParagraph {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: $colorForTitleParagraph;
+}
+
+@mixin textForParagraphs {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  color: $colotForText;
+}
+
+@mixin textForLabel {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  color: $colorForLabels;
+}
+
+@mixin textForPlaceholder {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: $colorForPlaceholder;
+}
+
+@mixin textForButton {
+  @include textForTitleParagraph;
+  color: $standardWhite;
+}
+
+@mixin textForLoadingPage {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: $colorForTitleParagraph;
+}
+
+@mixin textForError {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  color: $colorForError;
+}
+
+@mixin textFor5X {
+  @include titleLogo;
+  font-size: 32px;
+  color: $colorSliderText;
+}
+
+@mixin textForSlider {
+  @include textForMainParagraph;
+  color: $colorSliderText;
+}
+
+@mixin textForNavigation {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: $colorNavigation;
+}
+
+@mixin textForNavActive {
+  @include textForNavigation;
+  font-weight: 500;
+  color: $standardWhite;
+}

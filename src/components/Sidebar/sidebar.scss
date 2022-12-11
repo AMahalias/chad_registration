@@ -1,0 +1,164 @@
+@import '../../styles/customStyles.scss';
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(339.02deg, #0D3251 0%, #19476C 103.05%);
+  padding: 100px 2vw;
+  height:100vh;
+  max-width: 330px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: translateX(-90%);
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: translateX(0);
+  }
+
+  @include onTablet {
+    padding: 0;
+    max-width: 544px;
+  }
+
+  &_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2vh 20px; 
+
+    @include onTablet {
+      max-width: 364px;
+      margin-left: 50px;
+    }
+  }
+
+  &_slider {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 16px;
+    gap: 16px;
+    max-width: 364px;
+    height: 95px;
+    background-color: #134267;
+    border-radius: 8px;
+  }
+}
+
+.nav {
+  position: relative;
+  display: inline-block;
+  margin: 1vh auto 0;
+
+  @include onTablet {
+    margin-top: 10vh;
+    margin-left: 50px;
+  }
+
+  &_item {
+    @include textForNavigation;
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+    min-width: 335px;
+
+    @include onTablet {
+      font-size: 16px;
+      margin-bottom: 56px;
+    }
+
+    &.is-active {
+      @include textForNavActive;
+      font-size: 16px;
+    }
+  }
+
+  &_circle {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $colorNavigation;
+    border-radius: 16px;
+    margin-right: 16px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 54px;
+      left: 14px;
+      top: 32px;
+      border: 1px solid $colorNavigation;
+    }
+
+    &.is-active {
+      border: 2px solid $colorActiveNav;
+    }
+
+    &.last {
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+button.button-prev,
+button.button-next {
+  cursor: pointer;
+  height: 30px;
+  text-align: center;
+  align-self: center;
+  background-color: #134267;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  @include textForNavigation;
+
+  &:disabled {
+    background-color: transparent;
+  }
+}
+
+.slider {
+  &_left {
+    @include textFor5X;
+
+    display: flex;
+    align-items: center;
+  }
+  
+  &_right {
+    @include textForSlider;
+
+    display: flex;
+    align-items: center;
+  }
+  
+  &_buttons {
+    display: flex;
+    align-self: center;
+    gap: 12px;
+  }
+  
+  &_radioButton {
+    width: 8px;
+    height: 8px;
+    background-color: #134267;
+    border-radius: 4px;
+    color: transparent;
+
+    &.is-active {
+      background-color: #96CAF7;
+    }
+  } 
+}

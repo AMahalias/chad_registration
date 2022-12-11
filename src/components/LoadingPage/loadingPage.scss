@@ -1,0 +1,11 @@
+@import '../../styles/customStyles.scss';
+
+.loadingPage {
+  display: flex;
+  @include textForLoadingPage;
+  align-items: center;
+  justify-content: center;
+  background-color: $standardWhite;
+  width: 100%;
+  height: 100vh;
+}

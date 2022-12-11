@@ -1,0 +1,37 @@
+@import '../../styles/customStyles.scss';
+
+.error {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 18px 12px 24px;
+  position: absolute;
+  width: 308px;
+  height: 60px;
+  right: 20px;
+  top: 40px;
+  background: #FEF0F0;
+  box-shadow: 0px 1px 5px rgba(108, 117, 139, 0.4);
+  border-radius: 4px;
+  @include textForError;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    background-color: $colorForError;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &_close {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 15px;
+    width: 20px;
+    height: 15px;
+    color: $colorForError;
+  }
+}

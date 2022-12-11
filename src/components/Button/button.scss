@@ -1,0 +1,35 @@
+@import '../../styles/customStyles.scss';
+
+.button {
+  display: flex;
+  width: 100%;
+  @include textForTitleParagraph;
+  color: $standardWhite;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  height: 43px;
+  background-color: $colorActiveNav;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  
+  &:hover {
+    color: #fff;
+    background-color: #030E16;
+  }
+}
+
+.underButton_text {
+  display: flex;
+  justify-content: center;
+  @include textForParagraphs;
+  color: #464A53;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.underButton_link {
+  color: $colorActiveNav;
+  text-decoration: none;
+}
