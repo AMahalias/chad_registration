@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chad_registration/static/css/main.930b5289.css",
-    "main.js": "/chad_registration/static/js/main.5602a57d.js",
+    "main.css": "/chad_registration/static/css/main.6ae94459.css",
+    "main.js": "/chad_registration/static/js/main.b488afc2.js",
     "static/js/787.71818379.chunk.js": "/chad_registration/static/js/787.71818379.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/chad_registration/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
     "static/media/Inter-Medium.ttf": "/chad_registration/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
@@ -12,15 +12,17 @@
     "static/media/Raccoon_image.png": "/chad_registration/static/media/Raccoon_image.c1678bd908403927618a.png",
     "static/media/logo.svg": "/chad_registration/static/media/logo.6af0782d74fe7bc2b652.svg",
     "static/media/close_eye.svg": "/chad_registration/static/media/close_eye.44bb0227ab5ecda6f375.svg",
+    "static/media/loading_icon.svg": "/chad_registration/static/media/loading_icon.2194c79a7b40259799db.svg",
     "static/media/open_eye.svg": "/chad_registration/static/media/open_eye.492f5c1fe2fb917baaa2.svg",
     "index.html": "/chad_registration/index.html",
+    "static/media/google_icon.svg": "/chad_registration/static/media/google_icon.52a5a2e1d3b55e66d98e.svg",
     "static/media/Vector.svg": "/chad_registration/static/media/Vector.796057bd92543cafdf7d.svg",
-    "main.930b5289.css.map": "/chad_registration/static/css/main.930b5289.css.map",
-    "main.5602a57d.js.map": "/chad_registration/static/js/main.5602a57d.js.map",
+    "main.6ae94459.css.map": "/chad_registration/static/css/main.6ae94459.css.map",
+    "main.b488afc2.js.map": "/chad_registration/static/js/main.b488afc2.js.map",
     "787.71818379.chunk.js.map": "/chad_registration/static/js/787.71818379.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.930b5289.css",
-    "static/js/main.5602a57d.js"
+    "static/css/main.6ae94459.css",
+    "static/js/main.b488afc2.js"
   ]
 }
