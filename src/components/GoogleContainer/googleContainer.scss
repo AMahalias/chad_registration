@@ -30,9 +30,10 @@
     display: flex;
     gap: 50px;
     justify-content: space-between;
+    max-width: 400px;
 
     &-lang {
-      @include textForGoogleButtons;
+      @include textForGoogleLinksUnder;
       position: relative;
 
       &::after {
@@ -50,11 +51,11 @@
     &-buttons{
       display: flex;
       gap: 50px;
-      @include textForGoogleButtons;
+      @include textForGoogleLinksUnder;
     }
 
     &-button{
-      @include textForGoogleButtons;
+      @include textForGoogleLinksUnder;
     }
   }
 }

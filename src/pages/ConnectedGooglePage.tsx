@@ -1,6 +1,5 @@
 import React from 'react';
 import { GoogleContainer } from '../components/GoogleContainer';
-
 import { GoogleAccounts } from '../components/GoogleAccounts';
 
 type Props = {

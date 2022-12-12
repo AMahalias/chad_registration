@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './styles/customStyles.scss';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -16,10 +16,9 @@ import { ConnectedGooglePage } from './pages/ConnectedGooglePage';
 import { GoogleConnectionPage } from './pages/GoogleConnectionPage';
 import { LoadingGoogle } from './components/LoadingGoogle';
 import { getGoogle } from './api/google';
+import { OnboardingPage } from './pages/OnboardingPage';
 
 export const App: React.FC = () => {
-  const [shop_token, setShopToken] = useState('');
-  const [google_token, setGoogleToken] = useState('');
   const [name, setName] = useState('');
   const [isLoadingStore, setIsLoadingStore] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -34,9 +33,8 @@ export const App: React.FC = () => {
     try {
       const gettingStore = name && await getShopify(name);
       if (gettingStore) {
-        setShopToken(gettingStore.token);
         setStoreName(gettingStore.shop_name);
-        localStorage.setItem('shop_token', shop_token);
+        localStorage.setItem('shop_token', gettingStore.token);
       } 
     } catch {
       setIsError(true);
@@ -47,11 +45,9 @@ export const App: React.FC = () => {
 
   const getGoogleToken = async() => {
     try {
-    <LoadingGoogle />
       const gettingToken = await getGoogle();
       if (gettingToken) {
-        setGoogleToken(gettingToken.token);
-        localStorage.setItem('google_token', google_token);
+        localStorage.setItem('google_token', gettingToken.token);
       } 
     } catch {
       throw new Error('There is a problem with getting token.');
@@ -59,16 +55,6 @@ export const App: React.FC = () => {
   };
 
   console.log(localStorage);
-
-  useEffect(() => {
-    if (shop_token.length > 0) {
-      localStorage.setItem('shop_token', shop_token);
-    }
-
-    if (google_token.length > 0) {
-      localStorage.setItem('google_token', google_token);
-    }
-  }, [google_token, shop_token])
 
   return (
     <div className="App">
@@ -95,19 +81,26 @@ export const App: React.FC = () => {
                 setIsErrorDisconnected = {setIsErrorDisconnected}
             />} />
             <Route path=":disconnectPage" element={<ErrorDisconnectedPage />} />
-            <Route path=":success-connection" element={<SuccessfullShopifyConnectPage storeName={storeName} />} />
+            <Route path=":success-connection">
+              <Route index element={<SuccessfullShopifyConnectPage storeName={storeName} />} />
+              <Route path=":google">
+              <Route index element={<GooglePage />} />
+              <Route path=":connect-gmail">
+                <Route index element={<ConnectedGooglePage setSelectedUser={setSelectedUser} getGoogleToken={getGoogleToken} />} />
+                <Route path=":connection-gmail">
+                  <Route index element={<GoogleConnectionPage selectedUser={selectedUser} />} />
+                  <Route path=":loadingGoogle">
+                    <Route index element={<LoadingGoogle />} />
+                    <Route path=":done" element={<OnboardingPage />} />
+                  </Route>
+                </Route>
+              </Route> 
+              </Route> 
+            </Route>
           </Route>
         </Route>
 
         <Route path="/not-shopify" element={<NotUseShopifyPage />} />
-
-        <Route path="google">
-          <Route index element={<GooglePage />} />
-          <Route path=":connect-gmail">
-            <Route index element={<ConnectedGooglePage setSelectedUser={setSelectedUser} getGoogleToken={getGoogleToken} />} />
-            <Route path=":connection-gmail" element={<GoogleConnectionPage selectedUser={selectedUser} />}/>
-          </Route> 
-        </Route> 
 
         <Route path="/end" element={<EndPageWithoutShopify />}/>
 

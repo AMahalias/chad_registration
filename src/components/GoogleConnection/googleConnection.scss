@@ -1,2 +1,112 @@
+@import '../../styles/customStyles.scss';
 
+.connection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #BEC0C7;
+  border-top-color: transparent;
+  border-radius: 0 0 12px 12px;
+  padding: 15px;
+  gap: 20px;
 
+  &_title {
+    text-align: center;
+    @include textForGoogle;
+    
+    & span {
+      color: #2F70EE;
+    }
+  }
+
+  &_user {
+    display: flex;
+    gap: 10px;
+
+    @include textForGoogleTitle;
+    font-size: 14px;
+
+    &-avatar {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+    }
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.rules {
+  &_title {
+    @include textForGoogleTitle;
+    font-weight: 700;
+    margin-bottom: 22px;
+
+    & span {
+      color: #2F70EE;
+    }
+  }
+
+  &_list {
+    @include textForTitleParagraph;
+    font-size: 13px;
+    line-height: 140%;
+    color: #5E636E;
+    margin-bottom: 20px;
+
+    & span {
+      color: #2F70EE;
+      font-weight: 700;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      gap: 20px;
+      @include textForTitleParagraph;
+      color: $colorForGoogle;
+      margin-bottom: 17px;
+    }
+
+    &-icon--1 {
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      background: #2F70EE;
+    }
+
+    &-icon--2 {
+      width: 20px;
+      height: 20px;
+      background-image: url(../../images/gmail_icon.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-icon--end {
+      width: 20px;
+      height: 20px;
+      background-image: url(../../images/vector_imp.svg);
+      background-position: center;
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &_button {
+    cursor: pointer;
+    @include textForGoogleButtons;
+    padding: 5px 50px;
+    border: 1px solid $colorForPlaceholder;
+    border-radius: 4px;
+  }
+}

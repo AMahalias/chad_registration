@@ -22,7 +22,7 @@ export const SuccessfullShopifyConnectPage: React.FC<Props> = ({ storeName }) =>
         </div>
 
         <Button 
-          buttonLink='/google'
+          buttonLink='google'
           buttonTitle='Continue'
           underButtonText='Not your store?'
           underButtonLink='/shopify'
