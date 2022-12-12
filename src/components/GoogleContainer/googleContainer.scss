@@ -4,12 +4,57 @@
   &_background {
     display: flex;
     flex-direction: column;
-    border: 1px solid #BEC0C7;
     max-width: 470px;
     max-height: 609px;
+    margin: 2vh auto;
+    min-width: 400px;
   }
 
-  &_content {
+  &_header {
+    display: flex;
+    gap: 10px;
+    @include textForGooglePar;
+    color: #737B8C;
+    border: 1px solid #BEC0C7;
+    border-radius: 12px 12px 0 0;
+    padding: 15px;
+  }
 
+  &_icon {
+    background-image: url(../../images/google_icon.svg);
+    height: 20px;
+    width: 20px;
+  }
+
+  &_inform {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+
+    &-lang {
+      @include textForGoogleButtons;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -15px;
+        bottom: 15px;
+        background-position: bottom;
+        background-image: url(../../images/selectButton.svg);
+        width: 10px;
+        height: 6px;
+      }
+    }
+
+    &-buttons{
+      display: flex;
+      gap: 50px;
+      @include textForGoogleButtons;
+    }
+
+    &-button{
+      @include textForGoogleButtons;
+    }
   }
 }

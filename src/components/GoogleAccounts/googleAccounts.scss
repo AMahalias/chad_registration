@@ -1,0 +1,82 @@
+@import '../../styles/customStyles.scss';
+
+.google {
+  &_content {
+    border: 1px solid #BEC0C7;
+    border-top-color: transparent;
+    border-radius: 0 0 12px 12px;
+    padding: 15px;
+  }
+
+  &_title {
+    padding-top: 10%;
+    @include textForGoogle;
+    text-align: center;
+  }
+
+  &_subtitle {
+    @include textForGoogleSubtitle;
+    text-align: center;
+    
+    &-link {
+      color: #3674E0;
+    }
+  }
+}
+
+.accounts {
+  &_block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid #E3E5E8;
+  }
+
+  &_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+
+  &_data {
+    padding-top: 10px;
+    padding-bottom: 17px;
+  }
+
+  &_name {
+    @include textForGoogleTitle;
+    text-decoration: none;
+  }
+
+  &_email {
+    @include textForGoogleEmail;
+    text-decoration: none;
+  }
+
+  &_another {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 25px 17px;
+    border-bottom: 1px solid #E3E5E8;
+    @include textForGoogleTitle;
+
+    &-avatar {
+      display: inline-block;
+      background-image: url(../../images/another_account.svg);
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &_info {
+    @include textForGooglePar;
+    padding: 25px;
+    padding-bottom: 10px;
+
+    & span {
+      color: #3674E0;
+    }
+  }
+}

@@ -16,7 +16,6 @@ import { ConnectedGooglePage } from './pages/ConnectedGooglePage';
 import { GoogleConnectionPage } from './pages/GoogleConnectionPage';
 import { LoadingGoogle } from './components/LoadingGoogle';
 import { getGoogle } from './api/google';
-import { shopifyPage } from './texts/textsForMainTitles';
 
 export const App: React.FC = () => {
   const [shop_token, setShopToken] = useState('');
@@ -26,6 +25,7 @@ export const App: React.FC = () => {
   const [isError, setIsError] = useState(false);
   const [isErrorDisconnected, setIsErrorDisconnected] = useState(false);
   const [storeName, setStoreName] = useState('');
+  const [selectedUser, setSelectedUser] = useState('');
 
   const getShopifyStore = async(name: string) => {
     setIsLoadingStore(true);
@@ -104,8 +104,8 @@ export const App: React.FC = () => {
         <Route path="google">
           <Route index element={<GooglePage />} />
           <Route path=":connect-gmail">
-            <Route index element={<ConnectedGooglePage getGoogleToken={getGoogleToken} />} />
-            <Route path=":connection-gmail" element={<GoogleConnectionPage />}/>
+            <Route index element={<ConnectedGooglePage setSelectedUser={setSelectedUser} getGoogleToken={getGoogleToken} />} />
+            <Route path=":connection-gmail" element={<GoogleConnectionPage selectedUser={selectedUser} />}/>
           </Route> 
         </Route> 
 

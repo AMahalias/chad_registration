@@ -3,6 +3,11 @@ export const shopifyPage = {
   paragraph: 'This installs the Chad widget in your Shopify store and sets it up to display information that is relevant to your customers.',
 };
 
+export const googlePage = {
+  title: 'Connect your customer support email',
+  paragraph: `Allows Chad to send automated rote responses on your behalf, for instance to confirm that a customer's missing item complaint is being evaluated.`,
+};
+
 export const signupText = {
   title: 'Welcome to Chad',
   paragraph: `Go live in 10 minutes! Chad's self-service widget empowers your customers to manage orders and track shipments—with Chad, you can offer fast support 24/7 without going crazy.`,

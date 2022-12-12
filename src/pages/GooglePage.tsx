@@ -6,9 +6,7 @@ import { Logo } from '../components/Logo';
 import { Sidebar } from '../components/Sidebar';
 import { TitleBlock } from '../components/TitleBlock';
 import { googleList } from '../texts/textForLists';
-
-export const mainText = 'Allows Chad to send automated rote responses on your behalf, ' +
-`for instance to confirm that a customer's missing item complaint is being evaluated.`
+import { googlePage } from '../texts/textsForMainTitles';
 
 export const GooglePage: FC = () => (
   <>
@@ -17,7 +15,7 @@ export const GooglePage: FC = () => (
     <Container>
       <Logo />
 
-      <TitleBlock title={'Connect your customer support email'} text={mainText} />
+      <TitleBlock title={googlePage.title} text={googlePage.paragraph} />
 
       <List list={googleList} />
 

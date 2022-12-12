@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: 'Product Sans';
+  font-weight: 400;
+  src: url(../fonts/ProductSansRegular.ttf);
+}
+
+@font-face {
   font-family: 'Inter';
   font-weight: 600;
   src: url(../fonts/Inter-SemiBold.ttf);
@@ -30,6 +36,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+a {
+  color: transparent;
+  text-decoration: none;
+} 
 
 .help.is-danger {
   color: $colorForError;
@@ -109,7 +120,11 @@ select.select:focus {
   height: 100px;
 
   &_ready {
+    align-self: center;
     background-image: url(../images/Smiling_racoon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100px;
     height: 100px;
   }
@@ -133,7 +148,9 @@ select.select:focus {
 
 .gmail_background {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   z-index: 20;
   width: 100%;
   height: 100vh;
@@ -155,38 +172,38 @@ select.select:focus {
   }
 }
 
-.form-control {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 10px 10px 17px;
-  height: 45px;
-  background: #F8F9FC;
-  border-radius: 4px;
-  border: none;
-  margin-bottom: 24px;
-  outline: none;
-}
+// .form-control {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   padding: 10px 10px 10px 17px;
+//   height: 45px;
+//   background: #F8F9FC;
+//   border-radius: 4px;
+//   border: none;
+//   margin-bottom: 24px;
+//   outline: none;
+// }
 
-.form-control:focus {
-  box-shadow: none;
-  border: 1px solid $colorActiveNav;
-  border-radius: 4px;
-  outline: none;
-}
+// .form-control:focus {
+//   box-shadow: none;
+//   border: 1px solid $colorActiveNav;
+//   border-radius: 4px;
+//   outline: none;
+// }
 
-.form-control:active {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px 10px 10px 17px;
-  gap: 10px;
-  width: 400px;
-  height: 45px;
-  background: #FFFFFF;
-  border: 1px solid #32ABF2;
-  border-radius: 4px;
-  color: #030E16;
-  outline: none;
-  box-shadow: none;
-}
+// .form-control:active {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   padding: 10px 10px 10px 17px;
+//   gap: 10px;
+//   width: 400px;
+//   height: 45px;
+//   background: #FFFFFF;
+//   border: 1px solid #32ABF2;
+//   border-radius: 4px;
+//   color: #030E16;
+//   outline: none;
+//   box-shadow: none;
+// }
