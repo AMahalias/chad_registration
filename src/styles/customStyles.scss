@@ -140,6 +140,21 @@ select.select:focus {
   background-color: $standardWhite;
 }
 
+.connect-shopify {
+  text-align: center;
+
+  &_title {
+    text-align: center;
+    @include textForTitle;
+    margin: 16px 0;
+  }
+
+  &_text {
+    @include textForMainParagraph;
+    margin-bottom: 16px;
+  }
+}
+
 .form-control {
   display: flex;
   flex-direction: row;

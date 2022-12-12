@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/customStyles.scss';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -16,6 +16,7 @@ import { ConnectedGooglePage } from './pages/ConnectedGooglePage';
 import { GoogleConnectionPage } from './pages/GoogleConnectionPage';
 import { LoadingGoogle } from './components/LoadingGoogle';
 import { getGoogle } from './api/google';
+import { shopifyPage } from './texts/textsForMainTitles';
 
 export const App: React.FC = () => {
   const [shop_token, setShopToken] = useState('');
@@ -56,6 +57,18 @@ export const App: React.FC = () => {
       throw new Error('There is a problem with getting token.');
     } 
   };
+
+  console.log(localStorage);
+
+  useEffect(() => {
+    if (shop_token.length > 0) {
+      localStorage.setItem('shop_token', shop_token);
+    }
+
+    if (google_token.length > 0) {
+      localStorage.setItem('google_token', google_token);
+    }
+  }, [google_token, shop_token])
 
   return (
     <div className="App">

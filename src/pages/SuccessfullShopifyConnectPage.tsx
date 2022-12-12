@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from '../components/Button';
 import { Container } from '../components/Container';
 import { Sidebar } from '../components/Sidebar';
-import { TitleBlock } from '../components/TitleBlock';
 import '../styles/customStyles.scss';
 
 type Props = {
@@ -16,10 +15,11 @@ export const SuccessfullShopifyConnectPage: React.FC<Props> = ({ storeName }) =>
 
       <Container>
         <div className="shop_logo_ready" />
-        <TitleBlock 
-          title='Store connected'
-          text={'Smiling raccoon has been successfully connected to Chad. Find out more in the dashboard'} 
-        />
+        <div className="connect-shopify_title">Store connected</div>
+
+        <div className="connect-shopify_text">
+          Chad is now able to manage customer support requests for {storeName}.
+        </div>
 
         <Button 
           buttonLink='/google'

@@ -25,7 +25,12 @@ export const ConnectedShopifyPage: FC<Props> = ({
 
       <Container>
         <div className="shop_logo" />
-        <TitleBlock title="Store connected" text={`Chad is now able to manage customer support requests for ${storeName}.`} />
+
+        <div className="connect-shopify_title">Store connected</div>
+
+        <div className="connect-shopify_text">
+          Smiling raccoon has been successfully connected to Chad. Find out more in the dashboard
+        </div>
         
         <Button
           buttonLink='success-connection'

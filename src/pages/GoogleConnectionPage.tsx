@@ -5,9 +5,8 @@ import { GoogleContainer } from '../components/GoogleContainer';
 export const GoogleConnectionPage: React.FC = () => {
   const dataFromStorage = (value: string) => {
     const saved = localStorage.getItem(value);
-    const initialValue = saved && JSON.parse(saved);
 
-    return initialValue;
+    return saved || '';
   }
 
   const name = dataFromStorage('name');

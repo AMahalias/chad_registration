@@ -30,7 +30,6 @@ export const SignupForm: React.FC<Props> = ({ name, setName }) => {
     } else {
       setIsLoading(true);
       setIsValidated(true);
-      // createNewUser();
       localStorage.setItem('name', name);
       localStorage.setItem('email', email);
       localStorage.setItem('password', password);
@@ -40,8 +39,6 @@ export const SignupForm: React.FC<Props> = ({ name, setName }) => {
       }, 2000);
     }
   };
-
-  console.log(localStorage);
 
   return (
     <>
