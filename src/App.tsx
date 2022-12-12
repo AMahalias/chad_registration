@@ -92,7 +92,6 @@ export const App: React.FC = () => {
           <Route path=":connectShopify">
             <Route index element={
               <ConnectedShopifyPage 
-                storeName={storeName} 
                 setIsErrorDisconnected = {setIsErrorDisconnected}
             />} />
             <Route path=":disconnectPage" element={<ErrorDisconnectedPage />} />

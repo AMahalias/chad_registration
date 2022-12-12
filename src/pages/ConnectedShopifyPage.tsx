@@ -3,15 +3,12 @@ import { FC } from 'react';
 import { Button } from '../components/Button';
 import { Container } from '../components/Container';
 import { Sidebar } from '../components/Sidebar';
-import { TitleBlock } from '../components/TitleBlock';
 
 type Props = {
-  storeName: string;
   setIsErrorDisconnected: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const ConnectedShopifyPage: FC<Props> = ({ 
-  storeName, 
   setIsErrorDisconnected 
 }) => {
 
