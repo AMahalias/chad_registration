@@ -17,6 +17,7 @@ import { GoogleConnectionPage } from './pages/GoogleConnectionPage';
 import { LoadingGoogle } from './components/LoadingGoogle';
 import { getGoogle } from './api/google';
 import { OnboardingPage } from './pages/OnboardingPage';
+import { NotUseGooglePage } from './pages/NotUseGooglePage';
 
 export const App: React.FC = () => {
   const [name, setName] = useState('');
@@ -75,32 +76,34 @@ export const App: React.FC = () => {
               isErrorDisconnected={isErrorDisconnected}
             />} 
           />
-          <Route path=":connectShopify">
-            <Route index element={
-              <ConnectedShopifyPage 
-                setIsErrorDisconnected = {setIsErrorDisconnected}
-            />} />
-            <Route path=":disconnectPage" element={<ErrorDisconnectedPage />} />
-            <Route path=":success-connection">
-              <Route index element={<SuccessfullShopifyConnectPage storeName={storeName} />} />
-              <Route path=":google">
-              <Route index element={<GooglePage />} />
-              <Route path=":connect-gmail">
-                <Route index element={<ConnectedGooglePage setSelectedUser={setSelectedUser} getGoogleToken={getGoogleToken} />} />
-                <Route path=":connection-gmail">
-                  <Route index element={<GoogleConnectionPage selectedUser={selectedUser} />} />
-                  <Route path=":loadingGoogle">
-                    <Route index element={<LoadingGoogle />} />
-                    <Route path=":done" element={<OnboardingPage />} />
+          <Route path=":loading-shopify">
+            <Route index element={<LoadingPage />} />
+            <Route path=":connect-shopify"> 
+              <Route index element={<ConnectedShopifyPage setIsErrorDisconnected={setIsErrorDisconnected} />} /> 
+              <Route path=":disconnectPage" element={<ErrorDisconnectedPage />} />
+              <Route path=":success-connection">
+                <Route index element={<SuccessfullShopifyConnectPage storeName={storeName} />} />
+                <Route path=":google">
+                  <Route index element={<GooglePage />} />
+                  <Route path=":connect-gmail">
+                    <Route index element={<ConnectedGooglePage setSelectedUser={setSelectedUser} getGoogleToken={getGoogleToken} />} />
+                    <Route path=":connection-gmail">
+                      <Route index element={<GoogleConnectionPage selectedUser={selectedUser} />} />
+                      <Route path=":loadingGoogle">
+                        <Route index element={<LoadingGoogle />} />
+                        <Route path=":done" element={<OnboardingPage />} />
+                      </Route> 
+                    </Route> 
+                  </Route> 
                   </Route>
-                </Route>
-              </Route> 
-              </Route> 
+              </Route>
             </Route>
           </Route>
         </Route>
 
         <Route path="/not-shopify" element={<NotUseShopifyPage />} />
+        
+        <Route path="/not-gmail" element={<NotUseGooglePage />} />
 
         <Route path="/end" element={<EndPageWithoutShopify />}/>
 

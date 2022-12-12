@@ -1,31 +1,34 @@
 {
   "files": {
-    "main.css": "/chad_registration/static/css/main.46d2a644.css",
-    "main.js": "/chad_registration/static/js/main.7f833401.js",
+    "main.css": "/chad_registration/static/css/main.4cfc0635.css",
+    "main.js": "/chad_registration/static/js/main.3507ddf5.js",
     "static/js/787.71818379.chunk.js": "/chad_registration/static/js/787.71818379.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/chad_registration/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
     "static/media/Inter-Medium.ttf": "/chad_registration/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
     "static/media/Inter-Regular.ttf": "/chad_registration/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
     "static/media/surface1.png": "/chad_registration/static/media/surface1.6876ccd63ebe5b942d9a.png",
     "static/media/EudoxusSans-Bold.ttf": "/chad_registration/static/media/EudoxusSans-Bold.77cc3e756b19bad701f3.ttf",
+    "static/media/Onboarding_complete.png": "/chad_registration/static/media/Onboarding_complete.df612123bc3b81374cd9.png",
+    "static/media/ProductSansBold.ttf": "/chad_registration/static/media/ProductSansBold.53df38d5491afbeb42a5.ttf",
     "static/media/ProductSansRegular.ttf": "/chad_registration/static/media/ProductSansRegular.d165384076551a756b3c.ttf",
     "static/media/Smiling_racoon.png": "/chad_registration/static/media/Smiling_racoon.0df0b14892fa025ae3c6.png",
     "static/media/Raccoon_image.png": "/chad_registration/static/media/Raccoon_image.c1678bd908403927618a.png",
     "static/media/logo.svg": "/chad_registration/static/media/logo.6af0782d74fe7bc2b652.svg",
     "static/media/close_eye.svg": "/chad_registration/static/media/close_eye.44bb0227ab5ecda6f375.svg",
     "static/media/another_account.svg": "/chad_registration/static/media/another_account.893dd97c58647c0a6db5.svg",
-    "static/media/loading_icon.svg": "/chad_registration/static/media/loading_icon.2194c79a7b40259799db.svg",
     "static/media/open_eye.svg": "/chad_registration/static/media/open_eye.492f5c1fe2fb917baaa2.svg",
     "index.html": "/chad_registration/index.html",
     "static/media/google_icon.svg": "/chad_registration/static/media/google_icon.52a5a2e1d3b55e66d98e.svg",
+    "static/media/gmail_icon.svg": "/chad_registration/static/media/gmail_icon.7ce0c6022ad2f1efe4ec.svg",
+    "static/media/vector_imp.svg": "/chad_registration/static/media/vector_imp.c957025d595662fe13fa.svg",
     "static/media/Vector.svg": "/chad_registration/static/media/Vector.796057bd92543cafdf7d.svg",
     "static/media/selectButton.svg": "/chad_registration/static/media/selectButton.aa35a59560aaa9713c9a.svg",
-    "main.46d2a644.css.map": "/chad_registration/static/css/main.46d2a644.css.map",
-    "main.7f833401.js.map": "/chad_registration/static/js/main.7f833401.js.map",
+    "main.4cfc0635.css.map": "/chad_registration/static/css/main.4cfc0635.css.map",
+    "main.3507ddf5.js.map": "/chad_registration/static/js/main.3507ddf5.js.map",
     "787.71818379.chunk.js.map": "/chad_registration/static/js/787.71818379.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46d2a644.css",
-    "static/js/main.7f833401.js"
+    "static/css/main.4cfc0635.css",
+    "static/js/main.3507ddf5.js"
   ]
 }

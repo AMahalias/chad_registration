@@ -4,7 +4,6 @@ import { Container } from '../components/Container';
 import { ErrorDisconnected } from '../components/ErrorDisconnected';
 import { ErrorShopify } from '../components/ErrorShopify';
 import { List } from '../components/List';
-import { LoadingPage } from '../components/LoadingPage';
 import { Logo } from '../components/Logo';
 import { Sidebar } from '../components/Sidebar';
 import { TitleBlock } from '../components/TitleBlock';
@@ -44,22 +43,21 @@ export const ShopifyPage: React.FC<Props> = ({
   return (
     <>
       <Sidebar />
-      {isLoading ? (<LoadingPage />) : (
-        <Container>
-          <Logo />
-          <TitleBlock title={shopifyPage.title} text={shopifyPage.paragraph}/>
-          
-          <List list={shopifyList} />
 
-          <Button 
-            buttonLink='connectShopify'
-            buttonOnClick={() => getShopifyStore(name)}
-            buttonTitle='Connect Shopify store'
-            underButtonLink='/not-shopify'
-            underButtonTitle={`I don't use Shopify`}
-          />
-        </Container>
-      )} 
+      <Container>
+        <Logo />
+        <TitleBlock title={shopifyPage.title} text={shopifyPage.paragraph}/>
+        
+        <List list={shopifyList} />
+
+        <Button 
+          buttonLink='loading-shopify'
+          buttonOnClick={() => getShopifyStore(name)}
+          buttonTitle='Connect Shopify store'
+          underButtonLink='/not-shopify'
+          underButtonTitle={`I don't use Shopify`}
+        />
+      </Container>
     </>
   );
 };

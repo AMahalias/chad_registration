@@ -8,56 +8,59 @@ type Props = {
 };
 
 export const SelectPlatform: React.FC<Props> = ({ list }) => {
-  const [listOfOptions, setListOfOptins] = useState<string[]>(list);
+  const [listOfOptions, setListOfOptions] = useState<string[]>(list);
   const [selectedOption, setSelectedOption] = useState('');
   const [newOption, setNewOption] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (selectedOption === newOption) {
-      setListOfOptins([...listOfOptions, selectedOption]);
+    if (newOption.length > 0) {
+      setListOfOptions([...listOfOptions, newOption]);
+      setSelectedOption('');
     }
-  }, [selectedOption, newOption, listOfOptions]);
+  }, [newOption, listOfOptions]);
+  
 
   return (
     <div className="select">
       <label className='select_label'>Platform</label>
-      <div 
-        className={classNames('select_button', {
-          'is-open' : isOpen || newOption.length 
-        })} 
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {selectedOption || 'Select platform'}
-      </div>
-        {isOpen && (
-          <ul className='select_options'>
-            {listOfOptions.map(listItem => {
-              if (listItem === 'Other') {
-                return (
-                  <input 
-                    key={`input-${getRandomDigits()}`}
-                    className='select_input' 
-                    type="text"
-                    value={newOption} 
-                    onChange={(event) => setNewOption(event.target.value)}
-                    placeholder='Other' 
-                  />
-                )
-              }
-
-              return (
+      {(selectedOption === 'Other') ? (
+      <input 
+        key={`input-${getRandomDigits()}`}
+        className='select_input' 
+        type="text"
+        value={newOption} 
+        onChange={(event) => setNewOption(event.target.value)}
+        placeholder='Enter your platform here'
+      />) : (
+        <>
+          <div 
+            className={classNames('select_button', {
+              'is-open' : isOpen || newOption.length 
+            })} 
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {selectedOption || 'Select platform'}
+          </div>
+          
+          {isOpen && (
+            <ul className='select_options'>
+              {listOfOptions.map(listItem => (
                 <li 
                   className={classNames('select_item', { 'is-chosen': selectedOption === listItem})} 
                   key={`${listItem}-${getRandomDigits()}`} 
-                  onClick={() => setSelectedOption(listItem)}
+                  onClick={() => {
+                    setSelectedOption(listItem);
+                    setIsOpen(!isOpen);
+                  }}
                 >
                   {listItem}
                 </li>
-              ) 
-            })}
-          </ul>
-        )}
+              ))}
+            </ul>
+          )}
+        </>
+      )}
     </div>
   );
 };

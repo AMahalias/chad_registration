@@ -64,7 +64,7 @@
 
   &_item {
     @include textForNavigation;
-    font-size: 2vw;
+    font-size: 4vw;
     display: flex;
     align-items: center;
     margin-bottom: 56px;
@@ -77,7 +77,11 @@
 
     &.is-active {
       @include textForNavActive;
-      font-size: 16px;
+      font-size: 12px;
+
+      @include onTablet {
+        font-size: 16px;
+      }
     }
   }
 

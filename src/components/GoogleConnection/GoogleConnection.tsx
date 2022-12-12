@@ -47,7 +47,7 @@ export const GoogleConnection: React.FC<Props> = ({ selectedUser }) => {
             <div className="rules_list-item">
               <div className="rules_list-icon--1" />
                 Send email on your behalf
-              <div className="rules_list-icon--end" />
+              <div className="rules_list-icon--end rules_list-icon--end-1" />
             </div>
 
             <div className="rules_list-item">

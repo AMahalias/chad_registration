@@ -1,0 +1,17 @@
+@import '../../styles/customStyles.scss';
+
+.modal {
+  flex-direction: column;
+  max-width: 350px;
+  padding: 50px 35px;
+  background-color: $standardWhite;
+  box-shadow: 3px 12px 26px rgba(108, 117, 139, 0.3);
+  border-radius: 8px;
+
+  &_text {
+    @include textForNavigation;
+    color: #20496C;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+}

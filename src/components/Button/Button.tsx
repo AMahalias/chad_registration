@@ -35,5 +35,5 @@ export const Button: FC<Props> = ({
         </NavLink>
       </span>
     </>
-    )
-  };
+  );
+};

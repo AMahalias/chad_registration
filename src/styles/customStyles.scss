@@ -73,6 +73,11 @@ input:active {
   border-color: $colorActiveNav;
 }
 
+input:focus-visible {
+  outline: none;
+  outline-offset: none;
+}
+
 select.select:active, 
 select.select:focus {
   border-color: $colorActiveNav;
@@ -87,32 +92,6 @@ select.select:focus {
 @media (min-width: 576px){
   .container {
     max-width: 100%;
-  }
-}
-
-.error {
-  &_logo {
-    background-image: url(../images/logo.svg);
-    width: 88px;
-    height: 88px;
-  }
-
-  &_text {
-    @include textForMainParagraph;
-    color: #5F82A0;
-  }
-
-  &_container {
-    max-width: 480px;
-    max-height: 532px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $standardWhite;
-    border-radius: 8px;
-    box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
   }
 }
 
@@ -188,38 +167,26 @@ select.select:focus {
   background-image: url(../images/Onboarding_complete.png);
 }
 
-// .form-control {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   padding: 10px 10px 10px 17px;
-//   height: 45px;
-//   background: #F8F9FC;
-//   border-radius: 4px;
-//   border: none;
-//   margin-bottom: 24px;
-//   outline: none;
-// }
+.modal-dialog-scrollable {
+  max-height: 470px;
+}
 
-// .form-control:focus {
-//   box-shadow: none;
-//   border: 1px solid $colorActiveNav;
-//   border-radius: 4px;
-//   outline: none;
-// }
+.modal{
+  --bs-modal-padding: 0;
+  --bs-modal-header-padding: 0;
+  --bs-modal-footer-gap: 0;
+  --bs-modal-header-padding-x: 0;
+  --bs-modal-header-padding-y: 0;
+}
 
-// .form-control:active {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   padding: 10px 10px 10px 17px;
-//   gap: 10px;
-//   width: 400px;
-//   height: 45px;
-//   background: #FFFFFF;
-//   border: 1px solid #32ABF2;
-//   border-radius: 4px;
-//   color: #030E16;
-//   outline: none;
-//   box-shadow: none;
-// }
+.modal-dialog-centered {
+  min-height: 200px;
+}
+
+.image_done {
+  width: 80px;
+  height: 80px;
+  background-image: url(../images/Progress.png);
+  align-self: center;
+  margin-top: 120px;
+}

@@ -8,8 +8,10 @@ type Props = {
 
 export const GoogleConnectionPage: React.FC<Props> = ({ selectedUser }) => {
   return (
-    <GoogleContainer>
-      <GoogleConnection selectedUser={selectedUser} />
-    </GoogleContainer>
+    <div className="gmail_background">
+      <GoogleContainer>
+        <GoogleConnection selectedUser={selectedUser} />
+      </GoogleContainer>
+    </div>
   );
 };

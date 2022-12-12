@@ -31,10 +31,12 @@
     gap: 50px;
     justify-content: space-between;
     max-width: 400px;
+    margin: 0 auto;
 
     &-lang {
       @include textForGoogleLinksUnder;
       position: relative;
+      cursor: pointer;
 
       &::after {
         content: "";
@@ -55,6 +57,7 @@
     }
 
     &-button{
+      cursor: pointer;
       @include textForGoogleLinksUnder;
     }
   }

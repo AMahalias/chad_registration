@@ -50,4 +50,3 @@ export const GoogleAccounts: React.FC<Props> = ({ setSelectedUser, getGoogleToke
     </div>
   );
 }
-

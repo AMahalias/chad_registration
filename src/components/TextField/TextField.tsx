@@ -38,8 +38,6 @@ export const TextField: React.FC<Props> = ({
     }
   };
 
-  console.log(isActive)
-  
   return (
     <div className="field">
       <label className="field_label" htmlFor={id}>
