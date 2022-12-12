@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '../components/Button';
 import { Container } from '../components/Container';
+import { Sidebar } from '../components/Sidebar';
 import { TitleBlock } from '../components/TitleBlock';
 import '../styles/customStyles.scss';
 
@@ -10,20 +11,24 @@ type Props = {
 
 export const SuccessfullShopifyConnectPage: React.FC<Props> = ({ storeName }) => {
   return (
-    <Container>
-      <div className="shop_logo_ready" />
-      <TitleBlock 
-        title='Store connected'
-        text={'Smiling raccoon has been successfully connected to Chad. Find out more in the dashboard'} 
-      />
+    <>
+      <Sidebar />
 
-      <Button 
-        buttonLink='/google'
-        buttonTitle='Continue'
-        underButtonText='Not your store?'
-        underButtonLink='/shopify'
-        underButtonTitle='Connect another one'
-      />
-    </Container>
+      <Container>
+        <div className="shop_logo_ready" />
+        <TitleBlock 
+          title='Store connected'
+          text={'Smiling raccoon has been successfully connected to Chad. Find out more in the dashboard'} 
+        />
+
+        <Button 
+          buttonLink='/google'
+          buttonTitle='Continue'
+          underButtonText='Not your store?'
+          underButtonLink='/shopify'
+          underButtonTitle='Connect another one'
+        />
+      </Container>
+    </>
   );
 };

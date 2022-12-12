@@ -1,0 +1,15 @@
+@import '../../styles/customStyles.scss';
+
+.google {
+  &_background {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #BEC0C7;
+    max-width: 470px;
+    max-height: 609px;
+  }
+
+  &_content {
+
+  }
+}

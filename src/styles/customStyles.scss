@@ -31,14 +31,6 @@
   box-sizing: border-box;
 }
 
-.App--with-sidebar {
-  overflow: hidden;
-
-  @include onTablet {
-    overflow: visible;
-  }
-}
-
 .help.is-danger {
   color: $colorForError;
 }
@@ -80,15 +72,6 @@ select.select:focus {
     max-width: 100%;
   }
 }
-.container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
-}
 
 .error {
   &_logo {
@@ -105,6 +88,14 @@ select.select:focus {
   &_container {
     max-width: 480px;
     max-height: 532px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $standardWhite;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px rgba(108, 117, 139, 0.2);
   }
 }
 
@@ -119,6 +110,8 @@ select.select:focus {
 
   &_ready {
     background-image: url(../images/Smiling_racoon.png);
+    width: 100px;
+    height: 100px;
   }
 }
 
@@ -136,6 +129,15 @@ select.select:focus {
       text-decoration: none;
     }
   }
+}
+
+.gmail_background {
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  background-color: $standardWhite;
 }
 
 .form-control {

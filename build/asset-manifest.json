@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/chad_registration/static/css/main.930b5289.css",
+    "main.js": "/chad_registration/static/js/main.5602a57d.js",
+    "static/js/787.71818379.chunk.js": "/chad_registration/static/js/787.71818379.chunk.js",
+    "static/media/Inter-SemiBold.ttf": "/chad_registration/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
+    "static/media/Inter-Medium.ttf": "/chad_registration/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
+    "static/media/Inter-Regular.ttf": "/chad_registration/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "static/media/surface1.png": "/chad_registration/static/media/surface1.6876ccd63ebe5b942d9a.png",
+    "static/media/EudoxusSans-Bold.ttf": "/chad_registration/static/media/EudoxusSans-Bold.77cc3e756b19bad701f3.ttf",
+    "static/media/Smiling_racoon.png": "/chad_registration/static/media/Smiling_racoon.0df0b14892fa025ae3c6.png",
+    "static/media/Raccoon_image.png": "/chad_registration/static/media/Raccoon_image.c1678bd908403927618a.png",
+    "static/media/logo.svg": "/chad_registration/static/media/logo.6af0782d74fe7bc2b652.svg",
+    "static/media/close_eye.svg": "/chad_registration/static/media/close_eye.44bb0227ab5ecda6f375.svg",
+    "static/media/open_eye.svg": "/chad_registration/static/media/open_eye.492f5c1fe2fb917baaa2.svg",
+    "index.html": "/chad_registration/index.html",
+    "static/media/Vector.svg": "/chad_registration/static/media/Vector.796057bd92543cafdf7d.svg",
+    "main.930b5289.css.map": "/chad_registration/static/css/main.930b5289.css.map",
+    "main.5602a57d.js.map": "/chad_registration/static/js/main.5602a57d.js.map",
+    "787.71818379.chunk.js.map": "/chad_registration/static/js/787.71818379.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.930b5289.css",
+    "static/js/main.5602a57d.js"
+  ]
+}

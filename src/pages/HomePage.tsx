@@ -1,8 +1,8 @@
 import React from 'react';
 import { SignupForm } from '../components/SignupForm';
-import { Sidebar } from '../components/Sidebar';
 import { Logo } from '../components/Logo';
 import { Container } from '../components/Container';
+import { Sidebar } from '../components/Sidebar';
 
 type Props = {
   name: string;
@@ -11,13 +11,17 @@ type Props = {
 
 export const HomePage: React.FC<Props> = ({ name, setName }) => {
   return (
-    <Container>
-      <Logo />
+    <>
+      <Sidebar />
 
-      <SignupForm 
-        name={name}
-        setName={setName} 
-      />
-    </Container>
+      <Container>
+        <Logo />
+
+        <SignupForm 
+          name={name}
+          setName={setName} 
+        />
+      </Container>
+    </>
   );
 }

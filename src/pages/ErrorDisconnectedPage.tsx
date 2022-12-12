@@ -1,5 +1,6 @@
 import { FC, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Sidebar } from '../components/Sidebar';
 
 export const ErrorDisconnectedPage: FC = () => {
   const navigate = useNavigate();
@@ -11,9 +12,13 @@ export const ErrorDisconnectedPage: FC = () => {
   })
 
   return (
-    <div className="container error_container">
-      <div className="error_logo"></div>
-      <p className="error_text">Disconnecting store...</p>
-    </div> 
+    <>
+      <Sidebar />
+
+      <div className="error_container">
+        <div className="error_logo"></div>
+        <p className="error_text">Disconnecting store...</p>
+      </div> 
+    </>
   )
 };

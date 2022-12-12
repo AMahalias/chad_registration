@@ -1,4 +1,7 @@
-export const googleList = [
+import { Account } from "../types/Account";
+import { List } from "../types/List";
+
+export const googleList: List[] = [
   { name: 'Automated rote responses',
     text: `Lets your customers know that you've received their support request and are working on it`,
     id: 1,
@@ -13,7 +16,7 @@ export const googleList = [
   }
 ];
 
-export const shopifyList = [
+export const shopifyList: List[] = [
   { name: 'Track orders and shipping',
     text: 'Allow your customers to track order and shipping status on Shopify',
     id: 1,
@@ -27,3 +30,11 @@ export const shopifyList = [
     id: 3,
   }
 ];
+
+export const users: Account[] = [
+  { name: 'Giga Chad', email: 'gigachad@gmail.com', id: 1, color: '#32ABF2',
+  }, {
+    name: 'Mini Chad', email: 'minichad@gmail.com', id: 2, color: '#EB920B',
+  }, {
+    name: 'Ultra Chad', email: 'ultrachad@gmail.com', id: 3, color: '#65BD47',
+  }]

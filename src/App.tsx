@@ -6,15 +6,20 @@ import { HomePage } from './pages/HomePage';
 import { GooglePage } from './pages/GooglePage';
 import { ShopifyPage } from './pages/ShopifyPage';
 import { NotUseShopifyPage } from './pages/NotUseShopifyPage';
-import { Sidebar } from './components/Sidebar';
 import { ConnectedShopifyPage } from './pages/ConnectedShopifyPage';
 import { getShopify } from './api/shopify';
 import { ErrorDisconnectedPage } from './pages/ErrorDisconnectedPage';
 import { SuccessfullShopifyConnectPage } from './pages/SuccessfullShopifyConnectPage';
+import { LoadingPage } from './components/LoadingPage';
+import { EndPageWithoutShopify } from './pages/EndPageWithoutShopify';
+import { ConnectedGooglePage } from './pages/ConnectedGooglePage';
+import { GoogleConnectionPage } from './pages/GoogleConnectionPage';
+import { LoadingGoogle } from './components/LoadingGoogle';
+import { getGoogle } from './api/google';
 
 export const App: React.FC = () => {
   const [shop_token, setShopToken] = useState('');
-  // const [google_token, setGoogleToken] = useState('');
+  const [google_token, setGoogleToken] = useState('');
   const [name, setName] = useState('');
   const [isLoadingStore, setIsLoadingStore] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -23,6 +28,7 @@ export const App: React.FC = () => {
 
   const getShopifyStore = async(name: string) => {
     setIsLoadingStore(true);
+    <LoadingPage />
 
     try {
       const gettingStore = name && await getShopify(name);
@@ -38,6 +44,19 @@ export const App: React.FC = () => {
     }
   };
 
+  const getGoogleToken = async() => {
+    try {
+    <LoadingGoogle />
+      const gettingToken = await getGoogle();
+      if (gettingToken) {
+        setGoogleToken(gettingToken.token);
+        localStorage.setItem('google_token', google_token);
+      } 
+    } catch {
+      throw new Error('There is a problem with getting token.');
+    } 
+  };
+
   return (
     <div className="App">
       <Helmet>
@@ -45,8 +64,6 @@ export const App: React.FC = () => {
         <title>Chad</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-
-      <Sidebar />
 
       <Routes>
         <Route path="shopify">
@@ -72,9 +89,15 @@ export const App: React.FC = () => {
 
         <Route path="/not-shopify" element={<NotUseShopifyPage />} />
 
-        <Route path="google" element={<GooglePage />} />
+        <Route path="google">
+          <Route index element={<GooglePage />} />
+          <Route path=":connect-gmail">
+            <Route index element={<ConnectedGooglePage getGoogleToken={getGoogleToken} />} />
+            <Route path=":connection-gmail" element={<GoogleConnectionPage />}/>
+          </Route> 
+        </Route> 
 
-        <Route path="/end" element={<NotUseShopifyPage />}/>
+        <Route path="/end" element={<EndPageWithoutShopify />}/>
 
         <Route path="/" element={<HomePage name={name} setName={setName} />} />
         <Route path="home" element={<Navigate to="/" replace />} />

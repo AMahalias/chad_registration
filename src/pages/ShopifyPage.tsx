@@ -6,6 +6,7 @@ import { ErrorShopify } from '../components/ErrorShopify';
 import { List } from '../components/List';
 import { LoadingPage } from '../components/LoadingPage';
 import { Logo } from '../components/Logo';
+import { Sidebar } from '../components/Sidebar';
 import { TitleBlock } from '../components/TitleBlock';
 import { shopifyList } from '../texts/textForLists';
 import { shopifyPage } from '../texts/textsForMainTitles';
@@ -42,6 +43,7 @@ export const ShopifyPage: React.FC<Props> = ({
 
   return (
     <>
+      <Sidebar />
       {isLoading ? (<LoadingPage />) : (
         <Container>
           <Logo />

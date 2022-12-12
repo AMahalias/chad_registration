@@ -20,20 +20,6 @@ export const SignupForm: React.FC<Props> = ({ name, setName }) => {
   const [isTouched, setIsTouched] = useState(false);
   const navigate = useNavigate();
 
-  // const createNewUser = async() => {
-  //   try {
-  //     setIsLoading(true);
-
-  //     if (isValidated) {
-  //       await createUser(name, email, password);
-  //     }
-  //   } catch (error) {
-  //     throw new Error('We cannot create this user')
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // }
-
   const handleSubmit = (event: ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsTouched(true);

@@ -5,25 +5,30 @@ import { Logo } from '../components/Logo';
 import { SelectPlatform } from '../components/SelectPlatform';
 import { TitleBlock } from '../components/TitleBlock';
 import { notShopify } from '../texts/textsForMainTitles';
+import { Sidebar } from '../components/Sidebar';
 
 export const listOptions = ['Salesforce', 'Ecwid', 'Other'];
 
 export const NotUseShopifyPage: React.FC = () => {
   return (
-    <Container>
-      <Logo />
+    <>
+      <Sidebar />
 
-      <TitleBlock title={notShopify.title} text={notShopify.paragraph}/>
+      <Container>
+        <Logo />
 
-      <SelectPlatform list={listOptions} />
+        <TitleBlock title={notShopify.title} text={notShopify.paragraph}/>
 
-      <Button
-        buttonLink='/end'
-        buttonTitle='Submit'
-        underButtonText='Actually use Shopify?'
-        underButtonLink='/shopify'
-        underButtonTitle='Connect'
-      />
-    </Container>
+        <SelectPlatform list={listOptions} />
+
+        <Button
+          buttonLink='/end'
+          buttonTitle='Submit'
+          underButtonText='Actually use Shopify?'
+          underButtonLink='/shopify'
+          underButtonTitle='Connect'
+        />
+      </Container>
+    </>
   );
 };
