@@ -87,6 +87,7 @@ select.select:focus {
 .select:not(.is-multiple):not(.is-loading)::after {
   border-color: $colorForLabels;
   right: 15px;
+  top: 30px;
 }
 
 @media (min-width: 576px){
@@ -186,7 +187,10 @@ select.select:focus {
 .image_done {
   width: 80px;
   height: 80px;
-  background-image: url(../images/Progress.png);
+  background-image: url(../images/done_vector.svg);
   align-self: center;
-  margin-top: 120px;
+  margin-top: 80px;
+  margin-top: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }

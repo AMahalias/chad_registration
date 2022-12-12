@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import './selectPlatform.scss';
 import { getRandomDigits } from '../../utils/fetch';
+import { DebounceInput } from 'react-debounce-input';
 
 type Props = {
   list: string[];
@@ -19,20 +20,22 @@ export const SelectPlatform: React.FC<Props> = ({ list }) => {
       setSelectedOption('');
     }
   }, [newOption, listOfOptions]);
-  
 
   return (
     <div className="select">
       <label className='select_label'>Platform</label>
       {(selectedOption === 'Other') ? (
-      <input 
-        key={`input-${getRandomDigits()}`}
-        className='select_input' 
-        type="text"
-        value={newOption} 
-        onChange={(event) => setNewOption(event.target.value)}
-        placeholder='Enter your platform here'
-      />) : (
+        <DebounceInput 
+          key={`input-${getRandomDigits()}`}
+          minLength={2}
+          debounceTimeout={300}
+          className='select_input' 
+          type="text"
+          value={newOption} 
+          onChange={(event) => setNewOption(event.target.value)}
+          placeholder='Enter your platform here'
+        />
+        ) : (
         <>
           <div 
             className={classNames('select_button', {

@@ -1,5 +1,6 @@
 import { FC, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TailSpin } from  'react-loader-spinner';
 import './loadingGoogle.scss';
 
 export const LoadingGoogle: FC = () => {
@@ -13,9 +14,14 @@ export const LoadingGoogle: FC = () => {
 
   return (
     <div className="loading_background">
-      <svg className="loading_spinner" viewBox="0 0 50 50">
-        <circle className="loading_path" cx="25" cy="25" r="20" fill="none" strokeWidth="5" />
-      </svg>
+      <TailSpin
+        height="80"
+        width="80"
+        color="#4285F4"
+        ariaLabel="tail-spin-loading"
+        radius="1"
+        visible={true}
+      />
       <div className="loading_text">
         One moment please...
       </div>

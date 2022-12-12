@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chad_registration/static/css/main.4cfc0635.css",
-    "main.js": "/chad_registration/static/js/main.3507ddf5.js",
+    "main.css": "/chad_registration/static/css/main.e2ea6477.css",
+    "main.js": "/chad_registration/static/js/main.c6c39456.js",
     "static/js/787.71818379.chunk.js": "/chad_registration/static/js/787.71818379.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/chad_registration/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
     "static/media/Inter-Medium.ttf": "/chad_registration/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
@@ -23,12 +23,12 @@
     "static/media/vector_imp.svg": "/chad_registration/static/media/vector_imp.c957025d595662fe13fa.svg",
     "static/media/Vector.svg": "/chad_registration/static/media/Vector.796057bd92543cafdf7d.svg",
     "static/media/selectButton.svg": "/chad_registration/static/media/selectButton.aa35a59560aaa9713c9a.svg",
-    "main.4cfc0635.css.map": "/chad_registration/static/css/main.4cfc0635.css.map",
-    "main.3507ddf5.js.map": "/chad_registration/static/js/main.3507ddf5.js.map",
+    "main.e2ea6477.css.map": "/chad_registration/static/css/main.e2ea6477.css.map",
+    "main.c6c39456.js.map": "/chad_registration/static/js/main.c6c39456.js.map",
     "787.71818379.chunk.js.map": "/chad_registration/static/js/787.71818379.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4cfc0635.css",
-    "static/js/main.3507ddf5.js"
+    "static/css/main.e2ea6477.css",
+    "static/js/main.c6c39456.js"
   ]
 }
