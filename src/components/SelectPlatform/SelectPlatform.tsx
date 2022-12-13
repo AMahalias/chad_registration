@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import './selectPlatform.scss';
 import { getRandomDigits } from '../../utils/fetch';
@@ -14,13 +14,6 @@ export const SelectPlatform: React.FC<Props> = ({ list }) => {
   const [newOption, setNewOption] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (newOption.length > 0) {
-      setListOfOptions([...listOfOptions, newOption]);
-      setSelectedOption('');
-    }
-  }, [newOption, listOfOptions]);
-
   return (
     <div className="select">
       <label className='select_label'>Platform</label>
@@ -28,18 +21,21 @@ export const SelectPlatform: React.FC<Props> = ({ list }) => {
         <DebounceInput 
           key={`input-${getRandomDigits()}`}
           minLength={2}
-          debounceTimeout={300}
+          debounceTimeout={400}
           className='select_input' 
           type="text"
           value={newOption} 
-          onChange={(event) => setNewOption(event.target.value)}
+          onChange={(event) => {
+            setListOfOptions([...listOfOptions, event.target.value]);
+            setNewOption(event.target.value);
+          }}
           placeholder='Enter your platform here'
         />
         ) : (
         <>
           <div 
             className={classNames('select_button', {
-              'is-open' : isOpen || newOption.length 
+              'is-open' : isOpen
             })} 
             onClick={() => setIsOpen(!isOpen)}
           >

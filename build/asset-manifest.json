@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chad_registration/static/css/main.e2ea6477.css",
-    "main.js": "/chad_registration/static/js/main.c6c39456.js",
+    "main.css": "/chad_registration/static/css/main.1aad3dbb.css",
+    "main.js": "/chad_registration/static/js/main.6307b7e6.js",
     "static/js/787.71818379.chunk.js": "/chad_registration/static/js/787.71818379.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/chad_registration/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
     "static/media/Inter-Medium.ttf": "/chad_registration/static/media/Inter-Medium.6dcbc9bed1ec438907ee.ttf",
@@ -21,14 +21,15 @@
     "static/media/google_icon.svg": "/chad_registration/static/media/google_icon.52a5a2e1d3b55e66d98e.svg",
     "static/media/gmail_icon.svg": "/chad_registration/static/media/gmail_icon.7ce0c6022ad2f1efe4ec.svg",
     "static/media/vector_imp.svg": "/chad_registration/static/media/vector_imp.c957025d595662fe13fa.svg",
+    "static/media/done_vector.svg": "/chad_registration/static/media/done_vector.eddf16edc7bb4834f86f.svg",
     "static/media/Vector.svg": "/chad_registration/static/media/Vector.796057bd92543cafdf7d.svg",
     "static/media/selectButton.svg": "/chad_registration/static/media/selectButton.aa35a59560aaa9713c9a.svg",
-    "main.e2ea6477.css.map": "/chad_registration/static/css/main.e2ea6477.css.map",
-    "main.c6c39456.js.map": "/chad_registration/static/js/main.c6c39456.js.map",
+    "main.1aad3dbb.css.map": "/chad_registration/static/css/main.1aad3dbb.css.map",
+    "main.6307b7e6.js.map": "/chad_registration/static/js/main.6307b7e6.js.map",
     "787.71818379.chunk.js.map": "/chad_registration/static/js/787.71818379.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2ea6477.css",
-    "static/js/main.c6c39456.js"
+    "static/css/main.1aad3dbb.css",
+    "static/js/main.6307b7e6.js"
   ]
 }

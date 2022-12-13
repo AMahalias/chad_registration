@@ -1,7 +1,7 @@
 @import '../../styles/customStyles.scss';
 
 .select {
-  z-index: 90;
+  z-index: 30;
 
   &_label {
     @include textForLabel;
@@ -70,6 +70,7 @@
     list-style: none;
     @include textForPlaceholder;
     color: #17191C;
-    z-index: 20;
+    z-index: 33;
+    margin-top: 20px;
   }
 }

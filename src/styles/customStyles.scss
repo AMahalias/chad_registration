@@ -87,7 +87,12 @@ select.select:focus {
 .select:not(.is-multiple):not(.is-loading)::after {
   border-color: $colorForLabels;
   right: 15px;
-  top: 30px;
+  top: 60px;
+  z-index: 30;
+
+  &:active::after {
+    transform: scale(180%);
+  }
 }
 
 @media (min-width: 576px){
