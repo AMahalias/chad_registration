@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/chad_registration/static/css/main.eb9d6c0e.css",
+    "main.css": "/chad_registration/static/css/main.bf0542ba.css",
     "main.js": "/chad_registration/static/js/main.824b7f22.js",
     "static/js/787.71818379.chunk.js": "/chad_registration/static/js/787.71818379.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/chad_registration/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
@@ -24,12 +24,12 @@
     "static/media/done_vector.svg": "/chad_registration/static/media/done_vector.eddf16edc7bb4834f86f.svg",
     "static/media/Vector.svg": "/chad_registration/static/media/Vector.796057bd92543cafdf7d.svg",
     "static/media/selectButton.svg": "/chad_registration/static/media/selectButton.aa35a59560aaa9713c9a.svg",
-    "main.eb9d6c0e.css.map": "/chad_registration/static/css/main.eb9d6c0e.css.map",
+    "main.bf0542ba.css.map": "/chad_registration/static/css/main.bf0542ba.css.map",
     "main.824b7f22.js.map": "/chad_registration/static/js/main.824b7f22.js.map",
     "787.71818379.chunk.js.map": "/chad_registration/static/js/787.71818379.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb9d6c0e.css",
+    "static/css/main.bf0542ba.css",
     "static/js/main.824b7f22.js"
   ]
 }
