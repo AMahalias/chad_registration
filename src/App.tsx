@@ -21,16 +21,12 @@ import { NotUseGooglePage } from './pages/NotUseGooglePage';
 
 export const App: React.FC = () => {
   const [name, setName] = useState('');
-  const [isLoadingStore, setIsLoadingStore] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isErrorDisconnected, setIsErrorDisconnected] = useState(false);
   const [storeName, setStoreName] = useState('');
   const [selectedUser, setSelectedUser] = useState('');
 
   const getShopifyStore = async(name: string) => {
-    setIsLoadingStore(true);
-    <LoadingPage />
-
     try {
       const gettingStore = name && await getShopify(name);
       if (gettingStore) {
@@ -39,9 +35,7 @@ export const App: React.FC = () => {
       } 
     } catch {
       setIsError(true);
-    } finally {
-      setIsLoadingStore(false);
-    }
+    } 
   };
 
   const getGoogleToken = async() => {
@@ -54,8 +48,6 @@ export const App: React.FC = () => {
       throw new Error('There is a problem with getting token.');
     } 
   };
-
-  console.log(localStorage);
 
   return (
     <div className="App">
@@ -70,7 +62,6 @@ export const App: React.FC = () => {
           <Route index element={
             <ShopifyPage 
               name={name} 
-              isLoading={isLoadingStore}
               isError={isError}
               getShopifyStore={getShopifyStore}
               isErrorDisconnected={isErrorDisconnected}
@@ -79,8 +70,8 @@ export const App: React.FC = () => {
           <Route path=":loading-shopify">
             <Route index element={<LoadingPage />} />
             <Route path=":connect-shopify"> 
-              <Route index element={<ConnectedShopifyPage setIsErrorDisconnected={setIsErrorDisconnected} />} /> 
-              <Route path=":disconnectPage" element={<ErrorDisconnectedPage />} />
+              <Route index element={<ConnectedShopifyPage />} /> 
+              <Route path=":disconnectPage" element={<ErrorDisconnectedPage setIsErrorDisconnected={setIsErrorDisconnected} />} />
               <Route path=":success-connection">
                 <Route index element={<SuccessfullShopifyConnectPage storeName={storeName} />} />
                 <Route path=":google">

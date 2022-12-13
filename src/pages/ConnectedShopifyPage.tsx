@@ -4,18 +4,8 @@ import { Button } from '../components/Button';
 import { Container } from '../components/Container';
 import { Sidebar } from '../components/Sidebar';
 
-type Props = {
-  setIsErrorDisconnected: React.Dispatch<React.SetStateAction<boolean>>;
-};
 
-export const ConnectedShopifyPage: FC<Props> = ({ 
-  setIsErrorDisconnected 
-}) => {
-
-  const onClickFunction = () => {
-    setIsErrorDisconnected(true);
-  };
-
+export const ConnectedShopifyPage: FC = () => {
   return (
     <>
       <Sidebar />
@@ -35,7 +25,6 @@ export const ConnectedShopifyPage: FC<Props> = ({
           underButtonText='Wrong store?'
           underButtonLink='disconnectPage'
           underButtonTitle='Connect another one'
-          underButtonOnClick={() => onClickFunction}
         />
       </Container>
     </>

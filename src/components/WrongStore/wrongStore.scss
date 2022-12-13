@@ -13,8 +13,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
-    max-width: 480px;
+    width: 480px;
     margin: auto;
     padding: 5% 10%;
     height: 532px;

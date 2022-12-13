@@ -1,6 +1,6 @@
 @import '../../styles/customStyles.scss';
 
-.error {
+.error-disconnect {
   display: flex;
   flex-direction: row;
   padding: 12px 18px 12px 24px;
@@ -14,6 +14,8 @@
   border-radius: 4px;
   @include textForError;
   color: $colorForDisconnectError;
+  z-index: 30;
+  justify-content: space-between;
 
   &::before {
     content: "";

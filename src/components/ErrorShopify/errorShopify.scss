@@ -13,6 +13,8 @@
   box-shadow: 0px 1px 5px rgba(108, 117, 139, 0.4);
   border-radius: 4px;
   @include textForError;
+  z-index: 30;
+  justify-content: space-between;
 
   &::before {
     content: "";

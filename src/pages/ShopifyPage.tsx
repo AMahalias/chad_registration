@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button } from '../components/Button';
 import { Container } from '../components/Container';
 import { ErrorDisconnected } from '../components/ErrorDisconnected';
@@ -12,7 +12,6 @@ import { shopifyPage } from '../texts/textsForMainTitles';
 
 type Props = {
   name: string;
-  isLoading: boolean;
   isError: boolean;
   getShopifyStore: (name: string) => Promise<void>;
   isErrorDisconnected: boolean;
@@ -20,29 +19,16 @@ type Props = {
 
 export const ShopifyPage: React.FC<Props> = ({ 
   name, 
-  isLoading,
   isError,
   getShopifyStore,
   isErrorDisconnected,
 }) => {
-
-  useEffect (() => {
-    if (!isLoading && isError) {
-    setTimeout(() => {
-      <ErrorShopify />
-     }, 5000);
-    };
-
-    if (!isLoading && isErrorDisconnected) {
-      setTimeout(() => {
-        <ErrorDisconnected />
-      }, 5000)
-    }
-  }, [isLoading, isError, isErrorDisconnected])
-
   return (
     <>
       <Sidebar />
+
+      {isError && <ErrorShopify />}
+      {isErrorDisconnected && <ErrorDisconnected />}
 
       <Container>
         <Logo />

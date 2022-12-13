@@ -9,7 +9,7 @@ type Props = {
   underButtonText?: string;
   underButtonLink: string;
   underButtonTitle: string;
-  underButtonOnClick?: () => {};
+  underButtonOnClick?: (value: React.SetStateAction<boolean>) => void;
 };
 
 export const Button: FC<Props> = ({ 
@@ -30,7 +30,7 @@ export const Button: FC<Props> = ({
       <span className="underButton_text">
         {underButtonText}
 
-        <NavLink to={underButtonLink} className="underButton_link" onClick={underButtonOnClick}>
+        <NavLink to={underButtonLink} className="underButton_link" onClick={() => underButtonOnClick}>
           {underButtonTitle}
         </NavLink>
       </span>

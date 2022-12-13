@@ -5,7 +5,7 @@ import './modalCard.scss';
 
 export const ModalCard: React.FC = () => {
   return (
-    <div className="modal modal-dialog modal-dialog-centered">
+    <div className="modal modal-content">
       <TitleBlock title={`You're ready to go! 🚀`} />
       <div className="modal_text">
         <p>
