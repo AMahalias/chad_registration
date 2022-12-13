@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './errorDisconnected.scss';
 
 export const ErrorDisconnected: FC = () => (
   <div className="error-disconnect">
